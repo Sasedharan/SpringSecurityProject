@@ -1,19 +1,22 @@
 package com.em.ProjectSpringBoot.Service;
 
 import com.em.ProjectSpringBoot.Entity.User;
+import com.em.ProjectSpringBoot.dto.ResponseDTO;
+import com.em.ProjectSpringBoot.dto.UserDto;
+import com.em.ProjectSpringBoot.dto.UserResponseDTO;
 
 import java.util.List;
 
 public interface UserService {
-    User saveAllMethod(User user);
+     ResponseDTO saveAllMethod(UserDto user);
 
-    List<User> getAllMethod();
+    List<UserResponseDTO> getAllMethod();
 
-    User getByIdMethod(Long id);
+    UserResponseDTO getByIdMethod(Long id);
 
-    User updateByIdMethod(User user);
+    UserResponseDTO updateByIdMethod(Long idno ,User user);
 
-    void deleteAllMethod();
+    ResponseDTO deleteAllMethod();
 
-    void deleteByIdMethod(Long id);
+    ResponseDTO deleteByIdMethod(Long id);
 }
